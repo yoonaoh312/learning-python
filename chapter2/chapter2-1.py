@@ -167,3 +167,18 @@ for current_time in time:
     index += 1
 
 print('total customer {0}'. format(total_number))
+
+# answer from the lecture
+count =  0
+for i in range(1,51): 
+    # i  = 1 to 50
+    time = randrange(5,51) 
+    # i didn't use randrange funtion, used shuffle. It looks more clean.
+    # this function created random nubers within 5 to 50. 
+    if 5<= time <= 15:
+        print ('[0] you are customer #{0}, time taken: {1} minutes'.format(i, time))
+        count += 1
+    else:
+        print('[ ] you are customer #{0}, time taken: {1} minutes'.format(i, time))
+
+print('total customer {0}'. format(count))
