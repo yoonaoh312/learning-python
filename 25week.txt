@@ -1,4 +1,0 @@
-- 25 weekly report -
-team: 
-name: 
-summary: 
