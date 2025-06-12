@@ -1,10 +1,10 @@
 class Unit:
-    def __init__(self, name, hp, damage):
+    def __init__(self, name, hp):
         self.name = name
         self.hp = hp
-        self.damage = damage
-        print('created unit {0}'.format(self.name))
-        print('energy {0}, ability {1}'.format(self.hp, self.damage))
+     
+        # print('created unit {0}'.format(self.name))
+        # print('energy {0}, ability {1}'.format(self.hp, self.damage))
 
 # marine1 = Unit('marine', 40, 5)
 # marine2 = Unit('marine', 40, 5)
@@ -18,10 +18,9 @@ class Unit:
 # if wraith2.clocking == True:
 #     print('{0} is now clocking'.format(wraith2.name))
 
-class AttackUnit:
+class AttackUnit(Unit):
     def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
+        Unit.__init__(self, name, hp)
         self.damage = damage
     
     def attack(self, location):
